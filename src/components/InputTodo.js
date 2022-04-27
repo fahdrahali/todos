@@ -1,20 +1,19 @@
-import React, { Component } from "react"
+import React, { useState } from "react"
 
-class InputTodo extends Component {
-    state = {
-        title: ''
-    }
+const InputTodo = (props) => {
+    
+  const [title, setTitle] = useState({title: ''});
 
-    handleChange = (e) => {
-        this.setState({ 
+    const handleChange = (e) => {
+        setTitle({ 
            [e.target.name]: e.target.value })
     }
 
-    handleSubmit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        if (this.state.title.trim()) {
-        this.props.handleSubmit(this.state.title);
-        this.setState({
+        if (title.trim()) {
+        props.handleSubmit(this.state.title);
+        setTitle({
             title: ""
           });
         } else {
@@ -22,20 +21,19 @@ class InputTodo extends Component {
         }
     }
 
-  render() {
     return (
-      <form onSubmit={this.handleSubmit} className="form-container">
+      <form onSubmit={handleSubmit} className="form-container">
         <input 
             type="text"
             className="input-text"
             name= 'title'
             placeholder="Add Todo..." 
-            value={this.state.title}
-            onChange={this.handleChange}
+            value={title}
+            onChange={handleChange}
             />
         <button className="input-submit">Submit</button>
       </form>
     )
   }
-}
+
 export default InputTodo
