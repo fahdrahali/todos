@@ -11,6 +11,7 @@ class TodosList extends Component {
                 todo={todo} 
                 handleChange={this.props.handleChange}
                 handleDelete={this.props.handleDelete}
+                setUpdate={this.props.setUpdate}
                 />
             ))}
           </ul>
