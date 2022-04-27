@@ -9,8 +9,8 @@ import React from 'react';
             checked={completed}
             onChange={() => props.handleChange(id)}
             /> 
+            <button onClick={() => props.handleDelete(id)}>Delete</button>
             { title }
-            
             </li>
     }
  
