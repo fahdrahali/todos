@@ -1,7 +1,8 @@
 import React  from "react";
 import Header from "./Header";
 import InputTodo from "./InputTodo";
-import TodosList from './TodosList'
+import TodosList from './TodosList';
+
 class TodoContainer extends React.Component {
   state = {
     todos: [
@@ -51,14 +52,15 @@ class TodoContainer extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
+      <div className="inner">
       <Header />
       <InputTodo handleSubmit={this.addTodo}/> 
       <TodosList 
           todos={this.state.todos}  
           handleChange={this.handleChange} 
-          handleDelete={this.delTodo}
-          />
+          handleDelete={this.delTodo} />
+        </div>
     </div>
     );
   }
