@@ -7,7 +7,11 @@ class TodosList extends Component {
         return (
             <ul>
             {this.props.todos.map(todo => (
-              <TodoItem key={todo.id} todo={todo} handleChange={this.props.handleChange} />
+              <TodoItem key={todo.id} 
+                todo={todo} 
+                handleChange={this.props.handleChange}
+                handleDelete={this.props.handleDelete}
+                />
             ))}
           </ul>
         );
