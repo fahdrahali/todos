@@ -11,8 +11,8 @@ const InputTodo = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (title.trim()) {
-        props.handleSubmit(this.state.title);
+        if (title.title.trim()) {
+        props.handleSubmit(title.title);
         setTitle({
             title: ""
           });
@@ -28,7 +28,7 @@ const InputTodo = (props) => {
             className="input-text"
             name= 'title'
             placeholder="Add Todo..." 
-            value={title}
+            value={title.title}
             onChange={handleChange}
             />
         <button className="input-submit">Submit</button>

@@ -36,7 +36,7 @@ import styles from "./TodoItem.module.css"
         }
 
         return <li className={styles.item}> 
-        <div onClick={handleEditing}>
+        <div onDoubleClick={handleEditing}>
             <input 
             type='checkbox'
             className={styles.checkbox} 
