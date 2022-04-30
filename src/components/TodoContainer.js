@@ -21,7 +21,7 @@ const TodoContainer = () => {
     .then(data => setTodos(data))
   }
   console.log('test run', todos);
-},[setTodos])
+}, [setTodos])
 
 
   // componentDidUpdate(prevProps, prevState) {
